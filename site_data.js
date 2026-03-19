@@ -1,4 +1,4 @@
-cloudid = "seppisgoat";
-
+var password = "seppisgoat"
+cloudid = "zz"
 var elm = document.getElementById("potat");
-if (elm) elm.remove();
+elm.remove();
