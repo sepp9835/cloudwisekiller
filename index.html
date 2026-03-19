@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="site_data.js" id="potat"></script>
+<script src="handler.js"></script>
+<link rel="manifest" href="manifest.webmanifest" crossorigin="anonymous"/>
+<script type="text/javascript">
+    function request() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                alert(xhr.responseText);
+            }
+        }
+        xhr.open('get', 'https://google.com', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        xhr.send();
+    }
+</script>
+</head>
+<body>
+  <button style="font-size:500px" onclick="delo()">‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </button>
+</body>
+</html>

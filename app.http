@@ -1,0 +1,14 @@
+@baseUrl = https://httpbin.org/anything
+
+### Create a new todo item
+POST {{baseUrl}}/api/todos
+Content-Type: application/json
+
+{
+  "id": "{{ $guid }}",
+  "title": "Walk the dog",
+  "completed": false
+}
+
+### Get all todo items
+GET {{baseUrl}}/api/todos
