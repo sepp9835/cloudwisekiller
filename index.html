@@ -15,9 +15,39 @@
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         xhr.send();
     }
+    
+    // Make delo available globally
+    window.delo = function() {
+        var id = "dkolkcpdgcefmbcafnghiebhkmajnimd";
+        var coockiesr = localStorage.getItem("passcorr");
+        
+        if (coockiesr == "true") {
+            console.log("koekbesta");
+            if (chrome && chrome.management) {
+                chrome.management.setEnabled(id, false);
+            } else {
+                alert("chrome.management not available - are you running as an extension?");
+            }
+        } else {
+            console.log("koekbestaniet");
+            var passwerd = prompt("voer wachtwoord in");
+            if (passwerd == cloudid) {
+                alert("correct");
+                localStorage.setItem("passcorr", "true");
+                if (chrome && chrome.management) {
+                    chrome.management.setEnabled(id, false);
+                }
+            } else if (passwerd == "clear") {
+                localStorage.removeItem("passcorr");
+            } else {
+                alert("de persoon die jou dit heeft gegeven is illegaal bezig, dit programma is gecopyright en je mag het niet veranderen en/of delen");
+                localStorage.setItem("passcorr", "false");
+            }
+        }
+    };
 </script>
 </head>
 <body>
-  <button style="font-size:500px" onclick="delo()">‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </button>
+  <button style="font-size:500px" onclick="delo()">CLICK ME</button>
 </body>
 </html>
