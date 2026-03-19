@@ -1,6 +1,6 @@
 let coockiesr = localStorage.getItem("passcorr");
 function delo() {
-var id = "liecbddmkiiihnedobmlmillhodjkdmb";
+var id = "dkolkcpdgcefmbcafnghiebhkmajnimd";
 if (coockiesr == "true") {
   console.log("koekbesta");
   chrome.management.setEnabled(id, false)
